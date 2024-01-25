@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
 
-function App() {
+import React from "react";
+import "tailwindcss/tailwind.css"; 
+import Dashboard from "./components/Dashboard";
+import MedicationReminders from "./components/MedicationReminders";
+import ExercisePlans from "./components/ExercisePlans";
+import AppointmentScheduler from "./components/AppointmentScheduler";
+import EmergencyButton from "./components/EmergencyButton";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header className="bg-gray-800 text-white p-4 text-center">
+        <h1 className="text-2xl font-bold">Elderly Care App</h1>
       </header>
+
+      <main className="p-4">
+        {/* Dashboard Component */}
+        <Dashboard />
+
+        {/* Medication Reminders Component */}
+        <MedicationReminders />
+
+        {/* Exercise Plans Component */}
+        <ExercisePlans />
+
+        {/* Appointment Scheduler Component */}
+        <AppointmentScheduler />
+
+        {/* Emergency Button Component */}
+        <EmergencyButton />
+      </main>
+
+      <footer className="bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2023 Elderly Care App. All rights reserved.</p>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;
